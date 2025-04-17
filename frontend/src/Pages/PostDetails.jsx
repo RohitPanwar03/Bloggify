@@ -10,7 +10,7 @@ const PostDetails = () => {
     const {id} = useParams();
 
     useEffect(()=>{
-        axios.get(`http://localhost:8000/api/post/getsingle-post/${id}`)
+        axios.get(`https://bloggify-g48x.onrender.com/api/post/getsingle-post/${id}`)
         .then((res)=>{
             if(res.data.success){
                 setPost(res.data.post);  
