@@ -13,7 +13,7 @@ const MyPosts = () => {
 
 
     useEffect(()=>{
-      axios.get(`http://localhost:8000/api/post/get-user-post`,{
+      axios.get(`https://bloggify-g48x.onrender.com/api/post/get-user-post`,{
         headers:{
           Authorization: `Bearer ${token}`
         }
@@ -28,7 +28,7 @@ const MyPosts = () => {
 
     const handleDeletePost = (id)=>{
         try {
-            const res= axios.delete(`http://localhost:8000/api/post/delete-post/${id}`,{
+            const res= axios.delete(`https://bloggify-g48x.onrender.com/api/post/delete-post/${id}`,{
                 headers:{
                     Authorization: `Bearer ${token}`
                 }
