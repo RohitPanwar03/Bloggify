@@ -15,7 +15,7 @@ const UpdatePost = () => {
     const id = params.id;
 
     useEffect(()=>{
-        axios.get(`http://localhost:8000/api/post/getsingle-post/${id}`)
+        axios.get(`https://bloggify-g48x.onrender.com/api/post/getsingle-post/${id}`)
         .then((res)=>{
             if(res.data.success){
                 setTitle(res.data.post.title);  
@@ -40,7 +40,7 @@ const formData = new FormData();
     formData.append("description", description);
     formData.append("photo", photo);
 
-const res = await axios.put(`http://localhost:8000/api/post/update-post/${id}`,formData,{
+const res = await axios.put(`https://bloggify-g48x.onrender.com/api/post/update-post/${id}`,formData,{
     headers:{
         Authorization: `Bearer ${token}`
     }   
