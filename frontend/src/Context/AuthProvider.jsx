@@ -10,7 +10,7 @@ export const AuthProvider = ({children}) => {
 
     useEffect(()=>{
         if(token){
-            axios.get("http://localhost:8000/api/user/get-user-details",{
+            axios.get("https://bloggify-g48x.onrender.com/api/user/get-user-details",{
                 headers:{
                     Authorization: `Bearer ${token}`
                 }
