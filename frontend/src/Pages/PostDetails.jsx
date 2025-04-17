@@ -33,8 +33,9 @@ const PostDetails = () => {
             post && !loading ? (
                 <div className='flex justify-center items-center  bg-gradient-to-r from-slate-50 to-blue-100 h-screen  w-full'>
                 <div className='w-1/3 text-center shadow-2xl bg-white p-8 rounded-lg'>
+                     <img src={`https://bloggify-g48x.onrender.com/uploads/${post.photo}`} alt="" className='w-full h-64 object-fit rounded-lg' />
                   <h1 className='text-4xl font-bold mb-8'>{post.title}</h1>
-                  <img src={`https://bloggify-g48x.onrender.com/uploads/${post.photo}`} alt="" className='w-full h-64 object-fit rounded-lg' />
+                 
                   <p className='text-lg mt-4'>{post.description}</p>
                   <p className='text-sm text-gray-500 mt-2'>{post.userId.name}</p>
                   <p className='text-sm text-gray-500'>{new Date(post.createdAt).toLocaleDateString('en-CA')}</p>
