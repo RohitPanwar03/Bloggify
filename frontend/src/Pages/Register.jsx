@@ -11,7 +11,7 @@ const Register = () => {
 
   const handleRegister = async(e) => {
     e.preventDefault()
-    const response = await axios.post(`http://localhost:8000/api/user/register`, {
+    const response = await axios.post(`https://bloggify-g48x.onrender.com/api/user/register`, {
       name,
         email,
         password
