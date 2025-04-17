@@ -49,7 +49,7 @@ const MyPosts = () => {
       posts && posts.length>0 ?(
         posts.map((post)=>{
             return(
-              <div to={'/post-details'} key={post._id} className='shadow-xl rounded-lg border-2 p-4 m-4'>
+              <div key={post._id} className='shadow-xl rounded-lg border-2 p-4 m-4'>
                
                 <img src={`https://bloggify-g48x.onrender.com/uploads/${post.photo}`} alt="" className='w-full h-64 object-fit' />
                 
