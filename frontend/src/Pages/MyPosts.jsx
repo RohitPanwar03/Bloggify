@@ -51,7 +51,7 @@ const MyPosts = () => {
             return(
               <div to={'/post-details'} key={post._id} className='shadow-xl rounded-lg border-2 p-4 m-4'>
                
-                <img src={`http://localhost:8000/uploads/${post.photo}`} alt="" className='w-full h-64 object-fit' />
+                <img src={`https://bloggify-g48x.onrender.com/uploads/${post.photo}`} alt="" className='w-full h-64 object-fit' />
                 
                 <h1 className='text-3xl font-bold mt-4'>{post.title}</h1>
                 <div className='flex justify-between mt-2'>
