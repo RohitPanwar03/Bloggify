@@ -18,7 +18,7 @@ const formData = new FormData();
     formData.append("description", description);
     formData.append("photo", photo);
 
-const res = await axios.post("http://localhost:8000/api/post/create",formData,{
+const res = await axios.post("https://bloggify-g48x.onrender.com/api/post/create",formData,{
     headers:{
         Authorization: `Bearer ${localStorage.getItem('token')}`
     }   
