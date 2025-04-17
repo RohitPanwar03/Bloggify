@@ -1,13 +1,13 @@
 import './App.css'
+import { lazy} from 'react';
 import { Routes, Route } from 'react-router-dom'
-import HomePage from './Pages/HomePage'
-import Login from './Pages/Login'
-import Register from './Pages/Register'
-import Layout from './Components/Layout'
-import CreatePost from './Pages/CreatePost'
-import MyPosts from './Pages/MyPosts'
-import UpdatePost from './Pages/UpdatePost'
-import PostDetails from './Pages/PostDetails'
+const HomePage = lazy(()=>('./Pages/Login'));
+const Login = lazy(()=>('./Pages/Register'));
+const Register = lazy(()=>('./Components/Layout'));
+const CreatePost = lazy(()=>('./Pages/CreatePost'));
+const MyPosts = lazy(()=>('./Pages/MyPosts'));
+const PostDetails = lazy(()=>('./Pages/UpdatePost'));
+const UpdatePost = lazy(()=>('./Pages/PostDetails'));
 
 function App() {
 
