@@ -7,7 +7,7 @@ const HomePage = () => {
   const [posts, setPosts]=useState([]);
 
   useEffect(()=>{
-    axios.get("http://localhost:8000/api/post/get-post")
+    axios.get("https://bloggify-g48x.onrender.com/api/post/get-post")
     .then((res)=>{
       setPosts(res.data.posts);
     })
@@ -21,7 +21,7 @@ const HomePage = () => {
       return(
         <div key={post._id} className='w-80 shadow-xl rounded-lg border-2 p-4 m-4'>
          
-          <img src={`http://localhost:8000/uploads/${post.photo}`} alt="" className='w-full h-64 object-fit rounded-lg' />
+          <img src={`https://bloggify-g48x.onrender.com/uploads/${post.photo}`} alt="" className='w-full h-64 object-fit rounded-lg' />
           
           <h1 className='text-3xl font-bold mt-4'>{post.title}</h1>
           <p className='text-lg'>{post.description.slice(0,20)}</p>
