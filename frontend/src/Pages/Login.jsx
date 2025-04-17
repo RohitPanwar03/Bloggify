@@ -13,7 +13,7 @@ const Login = () => {
 
   const handleLogin = async(e) => {
     e.preventDefault()
-    const response = await axios.post(`http://localhost:8000/api/user/login`, {
+    const response = await axios.post(`https://bloggify-g48x.onrender.com/api/user/login`, {
         email,
         password
       })
