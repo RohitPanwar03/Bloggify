@@ -1,6 +1,7 @@
 import './App.css'
 import { lazy,Supspense} from 'react';
-import { Routes, Route } from 'react-router-dom'
+import {BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Header from "./Components/Header"
 const HomePage = lazy(()=>('./Pages/Login'));
 const Login = lazy(()=>('./Pages/Register'));
 const Register = lazy(()=>('./Components/Layout'));
@@ -12,9 +13,12 @@ const UpdatePost = lazy(()=>('./Pages/PostDetails'));
 function App() {
 
   return (
- <Supspense fallback={<h1>Loading...</h1>}>
+
+    <Router>
+      <Header/>
+     <Supspense fallback={<h1>Loading...</h1>}>
     <Routes>
-      <Route path='/' element={<Layout/>}>
+      
 
       <Route index element={<HomePage/>}/>
       <Route path='/login' element={<Login/>}/>
@@ -24,9 +28,11 @@ function App() {
       <Route path='/post-details/:id' element={<PostDetails/>}/>
       <Route path='/update-post/:id' element={<UpdatePost/>}/>
       <Route path='*' element={<h1 className='text-3xl text-center'>404 Not Found</h1>}/>
-      </Route>
+     
     </Routes>
  </Supspense>
+    </Router>
+
   )
 }
 export default App
